@@ -5,9 +5,10 @@ const port = 8000;
 
 app.use(express.json());
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(__dirname + "./index.html");
 });
 app.use("/find", router);
+
 app.listen(port, () => {
     console.log(`
     ################################################
